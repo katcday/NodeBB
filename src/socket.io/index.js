@@ -156,7 +156,6 @@ function deserializePayload(payload) {
 }
 
 async function callMethod(methodToCall, socket, params, callback) {
-	console.log("camille day");
 	if (methodToCall.constructor && methodToCall.constructor.name === 'AsyncFunction') {
 		const result = await methodToCall(socket, params);
 		callback(null, result);
